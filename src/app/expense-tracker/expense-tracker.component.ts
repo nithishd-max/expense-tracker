@@ -14,7 +14,6 @@ export class ExpenseTrackerComponent implements OnInit {
 
 
     constructor(private fb : FormBuilder, private expenseService : ExpensesService, private dummyService: DummyDataService) {
-      this.expenses=this.dummyService.getExpenses();
         this.expenseForm = this.fb.group({
             name: [
                 '',
@@ -36,7 +35,7 @@ export class ExpenseTrackerComponent implements OnInit {
         })
     }
     ngOnInit() {
-        this.expenses = this.expenseService.getExpenses();
+        this.expenses=this.dummyService.getExpenses();
     }
 
     onSubmit(expense : any) {

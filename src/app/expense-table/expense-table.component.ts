@@ -17,7 +17,6 @@ export class ExpenseTableComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.expenses=this.expenseService.getExpenses();
   }
 
   editExpense(index:number){
