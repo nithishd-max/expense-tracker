@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExpenseTrackerComponent } from './expense-tracker/expense-tracker.component';
 import { ExpenseTableComponent } from './expense-table/expense-table.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExpenseTrackerComponent,
-    ExpenseTableComponent
+    ExpenseTableComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

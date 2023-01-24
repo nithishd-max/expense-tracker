@@ -1,3 +1,7 @@
+.formpage{
+    background:cadetblue;
+    
+}
 form {
     margin-bottom: 1rem; /* adds some margin below the form */
 }
@@ -24,6 +28,8 @@ button {
     padding: 0.5rem 1rem; /* adds some padding to the button */
     border: none; /* removes the border from the button */
     margin-top: 1rem; /* adds some margin above the button */
+    position: relative;
+    margin: auto;
 }
 
 button:hover {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DummyDataService } from '../dummy-data.service';
 import { ExpensesService } from '../expenses.service';
 
 @Component({
@@ -8,11 +9,30 @@ import { ExpensesService } from '../expenses.service';
 })
 export class ExpenseTableComponent implements OnInit {
   expenses: any[] = [];
-
-  constructor(private expenseService: ExpensesService) { }
+  expenseForm: any;
+  editMode: boolean = false;
+  editedExpenseIndex!: number;
+    constructor(private expenseService: ExpensesService,private dummyService: DummyDataService) { 
+      this.expenses=this.dummyService.getExpenses();
+    }
 
   ngOnInit(): void {
     this.expenses=this.expenseService.getExpenses();
+  }
+
+  editExpense(index:number){
+    this.expenseForm.setValue({
+      name:this.expenses[index].name,
+      amount: this.expenses[index].amount,
+      date: this.expenses[index].date
+      
+    });
+    this.editMode= true;
+    this.editedExpenseIndex=index;
+  }
+
+  deleteExpene(index: number){
+    this.expenseService.deleteExpense(index);
   }
   calculateTotal(){
     let total = 0;
@@ -22,5 +42,4 @@ export class ExpenseTableComponent implements OnInit {
     }
     return total;
   }
-
-}
+  }

@@ -1,15 +1,15 @@
-<div>
+<div class="formpage">
 <form [formGroup]="expenseForm">
     <div class="form-group">
         <label for="name">Expense details</label>
         <input type="text"id="name" class="form-control" formControlName="name" required>
     </div>
     <div class="form-group">
-        <label for="amount"> Expense Amount details</label>
+        <label for="amount">  Amount details</label>
         <input type="number"id="amount" class="form-control" formControlName="amount" required>
     </div>
     <div class="form-group">
-        <label for="date">Expense Date details</label>
+        <label for="date"> Date </label>
         <input type="date"id="date" class="form-control" formControlName="date" required>
     </div>
 </form>
