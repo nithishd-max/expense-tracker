@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExpenseTrackerComponent } from './expense-tracker/expense-tracker.component';
+import { ExpenseTableComponent } from './expense-table/expense-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExpenseTrackerComponent,
+    ExpenseTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

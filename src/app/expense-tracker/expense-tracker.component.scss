@@ -1,0 +1,31 @@
+form {
+    margin-bottom: 1rem; /* adds some margin below the form */
+}
+
+label {
+    display: block; /* makes the label take up the full width of its parent container */
+    margin-bottom: 0.5rem; /* adds some margin below the label */
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%; /* sets the input to take up the full width of its parent container */
+    padding: 0.5rem; /* adds some padding to the input */
+    border: 1px solid #ddd; /* adds a border to the input */
+    margin-bottom: 1rem; /* adds some margin below the input */
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red; /* adds a red border to the input when it is invalid and touched */
+}
+
+button {
+    background-color: blue; /* sets the background color of the button */
+    color: white; /* sets the text color of the button */
+    padding: 0.5rem 1rem; /* adds some padding to the button */
+    border: none; /* removes the border from the button */
+    margin-top: 1rem; /* adds some margin above the button */
+}
+
+button:hover {
+    cursor: pointer; /* changes the cursor to a pointer when the button is hovered over */
+}

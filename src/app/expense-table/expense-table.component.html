@@ -1,0 +1,31 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Expense Name
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let expense of expenses">
+            <td>
+                {{expense.name}}
+            </td>
+            <td>
+                {{expense.amount}}
+            </td>
+            <td>
+                {{expense.date}}
+            </td>
+            
+        </tr>
+        
+    </tbody>
+    <p style="font-size: 30px"> Total Expenses:{{calculateTotal()}}</p>
+</table>
